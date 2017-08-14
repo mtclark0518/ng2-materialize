@@ -23,6 +23,7 @@ import { SelectComponent } from './select/select.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { TextareaComponent } from './textarea/textarea.component';
+import { TabComponent } from "./tab/tab.component";
 import { ToastComponent } from './toast/toast.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { ValidationComponent } from './validation/validation.component';
@@ -61,6 +62,7 @@ export const ROUTES: Routes = [
   { path: 'navbar', component: NavbarComponent, data: { icon: 'view-day', text: 'Navbar', section: layout } },
   { path: 'parallax', component: ParallaxComponent, data: { icon: 'image-area', text: 'Parallax', section: layout } },
   { path: 'sidenav', component: SidenavComponent, data: { icon: 'menu', text: 'Sidenav', section: layout } },
+  { path: 'tab', component: TabComponent, data: { icon: 'menu', text: 'Tab', section: layout } },
 
   // components routes - Loading
   { path: 'progress', component: ProgressComponent, data: { icon: 'timer-sand', text: 'Progress', section: loading } },

@@ -22,10 +22,12 @@ import * as Select from './select';
 import * as Shared from './shared';
 import * as Sidenav from './sidenav';
 import * as Spinner from './spinner/spinner.component';
+import * as Tab from './tab';
 import * as Textarea from './textarea';
 import * as Toast from './toast';
 import * as Tooltip from './tooltip';
 import * as Validation from './validation';
+import { TabComponent } from './tab/tab.component';
 
 const MZ_COMPONENTS = [
   Badge.MzBadgeComponent,
@@ -77,6 +79,8 @@ const MZ_COMPONENTS = [
   Sidenav.MzSidenavLinkComponent,
   Sidenav.MzSidenavSubheaderComponent,
   Spinner.MzSpinnerComponent,
+  Tab.TabComponent,
+  Tab.TabItemComponent,
   Textarea.MzTextareaDirective,
   Textarea.MzTextareaPrefixDirective,
   Textarea.MzTextareaContainerComponent,
