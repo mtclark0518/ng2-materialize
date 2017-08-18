@@ -8,11 +8,34 @@
   </div>
   <div class="card-content">
     <div id="view" class="col s12">
-
-      <form [formGroup]="userForm" (ngSubmit)="onSubmit()" novalidate>
-        <div class="section">
+      <form>
+        <div *ngIf="!userForm.controls['hasJob'].value">
+          <mz-select-container class="col s12 m6">
+            <select mz-select
+              id="select-activity-sector1"
+              [label]="'Activity sector'"
+              [placeholder]="'Choose your activity sector'">
+              <option *ngFor="let activitySectorOption of activitySectorOptions" [ngValue]="activitySectorOption">{{ activitySectorOption.text }}</option>
+            </select>
+          </mz-select-container>
+        </div>
+      </form>
+      <mz-checkbox-container class="col s2">
+          <input mz-checkbox type="checkbox" [(ngModel)]="isShown" [filledIn]="true">
+      </mz-checkbox-container>
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="section" *ngIf="!userForm.controls['hasJob'].value">
           <h6>Personnal information</h6>
           <div class="row">
+            <mz-select-container class="col s12 m6">
+              <select mz-select
+                id="select-activity-sector1"
+                formControlName="activitySector"
+                [label]="'Activity sector'"
+                [placeholder]="'Choose your activity sector'">
+                <option *ngFor="let activitySectorOption of activitySectorOptions" [ngValue]="activitySectorOption">{{ activitySectorOption.text }}</option>
+              </select>
+            </mz-select-container>
             <mz-input-container class="col s12 m6">
               <input mz-input mz-validation required
                 id="input-firstname"

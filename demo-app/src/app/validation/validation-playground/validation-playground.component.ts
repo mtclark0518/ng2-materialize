@@ -9,7 +9,7 @@ import { ActivitySector, Province, User } from '../models';
   styleUrls: ['./validation-playground.component.scss'],
 })
 export class ValidationPlaygroundComponent implements OnInit {
-
+  isShown = false;
   // fake datas
   activitySectorOptions: ActivitySector[] = [
     { slug: 'culture-music-art-literature', text: 'Culture,music, arts, literature' },
